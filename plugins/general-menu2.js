@@ -7,59 +7,69 @@ let jimp = require('jimp')
 let PhoneNumber = require('awesome-phonenumber')
 const defaultMenu = {
   before: `
-┌─────────────────⬣
-│        *мυʀѕι∂ вσт-χмℓ*      
-└┬───────────────✽
-┌┤⬡ *Nama* : %name
-││⬡ *Role* : %role
-││⬡ *Level* : %level %exp / %maxexp
-││⬡ *Total Xp* : %totalexp XP
-││⬡ *Tanggal Islam* : %dateIslamic
-└┤⬡ *Tanggal* : %date
-┌┤⬡ *Hari* : %week %weton
-│├───────────────✽
-││⬡ *Time* : %time WIB
-││⬡ *Pengguna* : %name 
-││⬡ *Limit* : %limit
-└┤⬡ *Level* : %level
-┌┤⬡ *Premium* : ${global.prem ? 'Ya' : 'Tidak'}
-││⬡ *Role* : %role
-│└───────────────✽
-│⬡ *Uptime* : %uptime
-│⬡ *Registrasi* : %rtotalreg
-│⬡ *Database* : %totalreg 
-│⬡ *Version* %version
-│⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-│⬡ https://instagram.com/mursid.st
-└─────────────────⬣`.trim(),
-  header: '┌──「 *%category* 」──⬣',
-  body: '│⬡ %cmd %islimit %isPremium',
-  footer: '└─────────⬣\n',
+┏━━━━━━━━━━━━━━━━━⬣
+┃        *мυʀѕι∂ вσт-χмℓ*      
+┗┳━━━━━━━━━━━━━━━✽
+┏┫⬡ *Nama* : %name
+┃┃⬡ *Role* : %role
+┃┃⬡ *Level* : %level %exp / %maxexp
+┃┃⬡ *Total Xp* : %totalexp XP
+┃┃⬡ *Tanggal Islam* : %dateIslamic
+┗┫⬡ *Tanggal* : %date
+┏┫⬡ *Hari* : %week %weton
+┃┣━━━━━━━━━━━━━━━✽
+┃┃⬡ *Time* : %time WIB
+┃┃⬡ *Pengguna* : %name 
+┃┃⬡ *Limit* : %limit
+┗┫⬡ *Level* : %level
+┏┫⬡ *Premium* : ${global.prem ? 'Ya' : 'Tidak'}
+┃┃⬡ *Role* : %role
+┃┗━━━━━━━━━━━━━━━✽
+┃⬡ *Uptime* : %uptime
+┃⬡ *Registrasi* : %rtotalreg
+┃⬡ *Database* : %totalreg 
+┃⬡ *Version* %version
+┃⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+┃⬡ https://instagram.com/mursid.st
+┗━━━━━━━━━━━━━━━━━⬣`.trim(),
+  header: '┏━━「 *%category* 」━━⬣',
+  body: '┃⬡ %cmd %islimit %isPremium',
+  footer: '┗━━━━━━━━⬣\n',
   after: `
-┌─「 *BIG THANKS TO* 」
-│⬡ Allah SWT
-│⬡ Adiwajshing
-│⬡ Nurutomo as wabot-aq
-│⬡ Istikmal as BochilGaming
-│⬡ Ariffb as stikerin
-│⬡ TioXd as BOTCAHX
-│⬡ Aguz Familia
-│⬡ Ziv San
-│⬡ The.sad.boy01
-│⬡ Nayla Hanifah
-│⬡ X-Team
-│⬡ Mark
-│⬡ AlyaaXd
-│⬡ Syahrul
-│⬡ Vanesha Desu
-│⬡ Aniq12
-│⬡ Amirul Dev
-│⬡ Rasell Comel
-│⬡ Krizyn_ofc
-│⬡ Mursid S
-│⬡ All Creator Bot
-│⬡ Para Donasi
-└────────⬣
+  *Assalamualaikum Warahmatullahi Wabarakatuh*
+  
+  _TERIMAKASIH BANYAK ATAS DUKUNGAN DAN PARTISIPASINYA_
+  _DALAM PENGEMBANGAN BOT INI, DAN JIKA SAYA ADA KESALAHAN_
+  _SAYA ATAS NAMA MURSID, MINTA MAAF SEBESAR-BESARNYA_
+  _SAYA HANYALAH KANG RECODE BIASA YANG HANYA MENGANDAIKAN_
+  _ORANG LAIN, DALAM PENGEMBANGAN BOT WHATSAPP INI_
+  
+  *Wassalamualaikum Warahmatullahi Wabarakatuh*
+  
+┏━「 *BIG THANKS TO* 」
+┃⬡ Allah SWT
+┃⬡ Adiwajshing
+┃⬡ Nurutomo as wabot-aq
+┃⬡ Istikmal as BochilGaming
+┃⬡ Ariffb as stikerin
+┃⬡ TioXd as BOTCAHX
+┃⬡ Aguz Familia as Family-Bot
+┃⬡ Ziv San as HAORI-MD
+┃⬡ The.sad.boy01
+┃⬡ Mark as Kurukuu-MD
+┃⬡ Rasell Comel
+┃⬡ Nayla Hanifah
+┃⬡ AlyaaXd
+┃⬡ Amirul Developer
+┃⬡ X-Team
+┃⬡ Syahrul
+┃⬡ Vanesha Desu
+┃⬡ Aniq12
+┃⬡ Krizyn_ofc
+┃⬡ Mursid S
+┃⬡ Icha
+┃⬡ All Creator Bot 
+┗━━━━━━━━⬣
 
 *%npmname@^%version*
 ${'```%npmdesc```'}
