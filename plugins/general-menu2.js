@@ -9,7 +9,7 @@ const defaultMenu = {
   before: `
 ┌─────────────────⬣
 │        *мυʀѕι∂ вσт-χмℓ*      
-└┬─────────────── 
+└┬───────────────✽
 ┌┤⬡ *Nama* : %name
 ││⬡ *Role* : %role
 ││⬡ *Level* : %level %exp / %maxexp
@@ -17,21 +17,21 @@ const defaultMenu = {
 ││⬡ *Tanggal Islam* : %dateIslamic
 └┤⬡ *Tanggal* : %date
 ┌┤⬡ *Hari* : %week %weton
-│├───────────────
+│├───────────────✽
 ││⬡ *Time* : %time WIB
 ││⬡ *Pengguna* : %name 
 ││⬡ *Limit* : %limit
 └┤⬡ *Level* : %level
 ┌┤⬡ *Premium* : ${global.prem ? 'Ya' : 'Tidak'}
 ││⬡ *Role* : %role
-│├───────────────
-││⬡ *Uptime* : %uptime
-││⬡ *Registrasi* : %rtotalreg
-││⬡ *Database* : %totalreg 
-││⬡ *Version* %version
-││⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-││⬡ https://instagram.com/mursid.st
-└┴────────────────⬣`.trim(),
+│└───────────────✽
+│⬡ *Uptime* : %uptime
+│⬡ *Registrasi* : %rtotalreg
+│⬡ *Database* : %totalreg 
+│⬡ *Version* %version
+│⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+│⬡ https://instagram.com/mursid.st
+└─────────────────⬣`.trim(),
   header: '┌──「 *%category* 」──⬣',
   body: '│⬡ %cmd %islimit %isPremium',
   footer: '└─────────⬣\n',
