@@ -546,7 +546,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 'headerType':6}
     await conn.sendMessage(m.chat,buttonMessage, { quoted:m})
 //await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/263582cc62fcfbdacd094.jpg')).buffer(),  '*────────[ DASBOARD ]───────*', text, 'ᴅσɴαѕι', '.donasi', 'ρємιℓιк вσт', '.owner', m)
-await conn.sendFile(m.chat, fs.readFileSync('./mp3/anu.opus'), '', m, true,{ fileLength: 887890909999999 )
+await conn.sendFile(m.chat, fs.readFileSync('./mp3/sidd.mp3'), '', m, true,{ fileLength: 887890909999999 )
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
