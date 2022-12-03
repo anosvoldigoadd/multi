@@ -7,69 +7,60 @@ let jimp = require('jimp')
 let PhoneNumber = require('awesome-phonenumber')
 const defaultMenu = {
   before: `
-┏━━━━━━━━━━━━━━━━━⬣
-┃        *мυʀѕι∂ вσт-χмℓ*      
-┗┳━━━━━━━━━━━━━━━✽
-┏┫⬡ *Nama* : %name
-┃┃⬡ *Role* : %role
-┃┃⬡ *Level* : %level %exp / %maxexp
-┃┃⬡ *Total Xp* : %totalexp XP
-┃┃⬡ *Tanggal Islam* : %dateIslamic
-┗┫⬡ *Tanggal* : %date
-┏┫⬡ *Hari* : %week %weton
-┃┣━━━━━━━━━━━━━━━✽
-┃┃⬡ *Time* : %time WIB
-┃┃⬡ *Pengguna* : %name 
-┃┃⬡ *Limit* : %limit
-┗┫⬡ *Level* : %level
-┏┫⬡ *Premium* : ${global.prem ? 'Ya' : 'Tidak'}
-┃┃⬡ *Role* : %role
-┃┗━━━━━━━━━━━━━━━✽
-┃⬡ *Uptime* : %uptime
-┃⬡ *Registrasi* : %rtotalreg
-┃⬡ *Database* : %totalreg 
-┃⬡ *Version* %version
-┃⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-┃⬡ https://instagram.com/mursid.st
-┗━━━━━━━━━━━━━━━━━⬣`.trim(),
-  header: '┏━━「 *%category* 」━━⬣',
-  body: '┃⬡ %cmd %islimit %isPremium',
-  footer: '┗━━━━━━━━⬣\n',
+┌───────────────────⬣
+│          *мυʀѕι∂ вσт-χмℓ*      
+└┬────────────────✽
+┌┤⬡ *Nama* : %name
+││⬡ *Role* : %role
+││⬡ *Level* : %level %exp / %maxexp
+││⬡ *Total Xp* : %totalexp XP
+││⬡ *Tanggal Islam* : %dateIslamic
+││⬡ *Tanggal* : %date
+││⬡ *Hari* : %week %weton
+││
+││⬡ *Time* : %time WIB
+││⬡ *Pengguna* : %name 
+││⬡ *Limit* : %limit
+││⬡ *Level* : %level
+││⬡ *Premium* : ${global.prem ? 'Ya' : 'Tidak'}
+││⬡ *Role* : %role
+││
+││⬡ *Uptime* : %uptime
+││⬡ *Registrasi* : %rtotalreg
+││⬡ *Database* : %totalreg 
+││⬡ *Version* %version
+││⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+└┤⬡  https://instagram.com/mursid.st
+┌┴────────────────✽
+│         *мυʀѕι∂ вσт-χмℓ*      
+└───────────────────⬣`.trim(),
+  header: '┌──⬣「 *%category* 」──⬣',
+  body: '│⬡ %cmd %islimit %isPremium',
+  footer: '└──────────⬣\n',
   after: `
-  *Assalamualaikum Warahmatullahi Wabarakatuh*
-  
-  _TERIMAKASIH BANYAK ATAS DUKUNGAN DAN PARTISIPASINYA_
-  _DALAM PENGEMBANGAN BOT INI, DAN JIKA SAYA ADA KESALAHAN_
-  _SAYA ATAS NAMA MURSID, MINTA MAAF SEBESAR-BESARNYA_
-  _SAYA HANYALAH KANG RECODE BIASA YANG HANYA MENGANDAIKAN_
-  _ORANG LAIN, DALAM PENGEMBANGAN BOT WHATSAPP INI_
-  
-  *Wassalamualaikum Warahmatullahi Wabarakatuh*
-  
-┏━「 *BIG THANKS TO* 」
-┃⬡ Allah SWT
-┃⬡ Adiwajshing
-┃⬡ Nurutomo as wabot-aq
-┃⬡ Istikmal as BochilGaming
-┃⬡ Ariffb as stikerin
-┃⬡ TioXd as BOTCAHX
-┃⬡ Aguz Familia as Family-Bot
-┃⬡ Ziv San as HAORI-MD
-┃⬡ The.sad.boy01
-┃⬡ Mark as Kurukuu-MD
-┃⬡ Rasell Comel
-┃⬡ Nayla Hanifah
-┃⬡ AlyaaXd
-┃⬡ Amirul Developer
-┃⬡ X-Team
-┃⬡ Syahrul
-┃⬡ Vanesha Desu
-┃⬡ Aniq12
-┃⬡ Krizyn_ofc
-┃⬡ Mursid S
-┃⬡ Icha
-┃⬡ All Creator Bot 
-┗━━━━━━━━⬣
+┌─「 *BIG THANKS TO* 」
+│⬡ Allah SWT
+│⬡ Adiwajshing
+│⬡ Nurutomo as wabot-aq
+│⬡ Istikmal as BochilGaming
+│⬡ Ariffb as stikerin
+│⬡ TioXd as BOTCAHX
+│⬡ Aguz Familia as Family-Bot
+│⬡ Ziv San as HAORI-MD
+│⬡ The.sad.boy01
+│⬡ Mark as Kurukuu-MD
+│⬡ Rasell Comel
+│⬡ Nayla Hanifah
+│⬡ AlyaaXd
+│⬡ Amirul Developer
+│⬡ X-Team
+│⬡ Syahrul
+│⬡ Vanesha Desu
+│⬡ Aniq12
+│⬡ Krizyn_ofc
+│⬡ Mursid S
+│⬡ All Creator Bot 
+└───────────⬣
 
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -541,7 +532,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 'title': 'мυʀѕι∂ вσт-χмℓ',
 'body':'ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ʙʏ ᴍᴜʀꜱɪᴅ',
 'mediaType': 1,
-'thumbnail': await(await fetch('https://telegra.ph/file/5698587cf7cac2d860fd4.jpg')).buffer(),
+'thumbnail': await(await fetch('https://telegra.ph/file/83c5242f5535f03c7c7c3.jpg')).buffer(),
 'sourceUrl':'https://instagram.com/mursid.st'}},
 'caption': text,
 'footer': hao,
@@ -555,7 +546,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 'headerType':6}
     await conn.sendMessage(m.chat,buttonMessage, { quoted:m})
 //await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/263582cc62fcfbdacd094.jpg')).buffer(),  '*────────[ DASBOARD ]───────*', text, 'ᴅσɴαѕι', '.donasi', 'ρємιℓιк вσт', '.owner', m)
-await conn.sendFile(m.chat, fs.readFileSync('./mp3/anuu.mp3'), '', false, m)
+await conn.sendFile(m.chat, fs.readFileSync('./mp3/anu.opus'), '', m, true,{ fileLength: 887890909999999 )
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
