@@ -17,24 +17,22 @@ const defaultMenu = {
 ││⬡ *Tanggal Islam* : %dateIslamic
 ││⬡ *Tanggal* : %date
 ││⬡ *Hari* : %week %weton
-││
-││⬡ *Time* : %time WIB
-││⬡ *Pengguna* : %name 
-││⬡ *Limit* : %limit
-││⬡ *Level* : %level
-││⬡ *Premium* : ${global.prem ? 'Ya' : 'Tidak'}
-││⬡ *Role* : %role
-││
-││⬡ *Uptime* : %uptime
-││⬡ *Registrasi* : %rtotalreg
-││⬡ *Database* : %totalreg 
-││⬡ *Version* %version
-││⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-└┤⬡  https://instagram.com/mursid.st
-┌┴────────────────✽
-│         *мυʀѕι∂ вσт-χмℓ*      
-└───────────────────⬣`.trim(),
-  header: '┌──⬣「 *%category* 」──⬣',
+│└────────────────✽
+│⬡ *Time* : %time WIB
+│⬡ *Role* : %role
+│⬡ *Pengguna* : %name 
+│⬡ *Limit* : %limit
+│⬡ *Level* : %level
+│⬡ *Premium* : ${global.prem ? 'Ya' : 'Tidak'}
+├────────────────✽
+│⬡ *Uptime* : %uptime
+│⬡ *Registrasi* : %rtotalreg
+│⬡ *Database* : %totalreg 
+│⬡ *Version* %version
+│⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+│⬡ https://instagram.com/mursid.st
+└─────────────────⬣`.trim(),
+  header: '┌──「 *%category* 」──⬣',
   body: '│⬡ %cmd %islimit %isPremium',
   footer: '└──────────⬣\n',
   after: `
@@ -42,15 +40,15 @@ const defaultMenu = {
 │⬡ Allah SWT
 │⬡ Adiwajshing
 │⬡ Nurutomo as wabot-aq
-│⬡ Istikmal as BochilGaming
+│⬡ Istikmal as BochilGaming My Team
 │⬡ Ariffb as stikerin
-│⬡ TioXd as BOTCAHX
+│⬡ TioXd as BOTCAHX My Team
 │⬡ Aguz Familia as Family-Bot
-│⬡ Ziv San as HAORI-MD
-│⬡ The.sad.boy01
-│⬡ Mark as Kurukuu-MD
+│⬡ Ziv San as HAORI-MD My Team
+│⬡ The.sad.boy01 My Team
+│⬡ Mark as Kurukuu-MD My Team 
 │⬡ Rasell Comel
-│⬡ Nayla Hanifah
+│⬡ Nayla Hanifah My Support
 │⬡ AlyaaXd
 │⬡ Amirul Developer
 │⬡ X-Team
@@ -58,7 +56,7 @@ const defaultMenu = {
 │⬡ Vanesha Desu
 │⬡ Aniq12
 │⬡ Krizyn_ofc
-│⬡ Mursid S
+│⬡ Mursid S 
 │⬡ All Creator Bot 
 └───────────⬣
 
@@ -73,28 +71,38 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['all', 'game', 'rpg', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'Utama',
-    'game': 'Game',
-    'rpg': 'Epic RPG',
-    'xp': 'Exp & Limit',
-    'sticker': 'Stiker',
-    'kerang': 'Kerang Ajaib',
-    'quotes': 'Quotes',
-    'group': 'Grup',
-    'premium': 'Premium',
-    'internet': 'Internet',
-    'anonymous': 'Anonymous Chat',
-    'nulis': 'MagerNulis & Logo',
-    'downloader': 'Downloader',
-    'tools': 'Tools',
-    'fun': 'Fun',
-    'database': 'Database',
-    'vote': 'Voting',
-    'absen': 'Absen',
-    'quran': 'Al Qur\'an',
-    'audio': 'Pengubah Suara',
-    'jadibot': 'Jadi Bot',
-    'info': 'Info',
+    'main': 'MENU UTAMA',
+    'downloader': 'MENU DOWNLOADER',
+    'download': 'SOUNDCLOUD',
+    'sticker': 'MENU CONVERT',
+    'advanced': 'ADVANCED',
+    'absen': 'MENU ABSEN',
+    'anime': 'MENU ANIME',
+    'xp': 'MENU EXP',
+    'fun': 'MENU FUN',
+    'game': 'MENU GAME',
+    'github': 'MENU GITHUB',
+    'group': 'MENU GROUP',
+    'image': 'MENU IMAGE',
+    'info': 'MENU INFO',
+    'internet': 'INTERNET',
+    'islam' : 'MENU ISLAMI',
+    'kerang': 'MENU KERANG',
+    'maker': 'MENU MAKER',
+    'owner': 'MENU OWNER',
+    'Pengubah Suara': 'PENGUBAH SUARA',
+    'premium': 'PREMIUM MENU',
+    'quotes' : 'MENU QUOTES',
+    'rpg': 'MENU RPG',
+    'stalk': 'MENU STALK',
+    'shortlink': 'SHORT LINK',
+    'tools': 'MENU TOOLS',
+    'vote': 'MENU VOTING',
+    'nsfw': 'NSFW MENU', 
+    'asupan': 'ASUPAN MENU', 
+    'random': 'RANDOM MENU', 
+    'textpro': 'TEXT PRO MENU', 
+    'photooxy': 'PHOTO OXY MENU',    
     '': 'Tanpa Kategori',
   }
   if (teks == 'game') tags = {
@@ -265,7 +273,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                         }
                       }
                       let hao = ` *Official Bot By @${"0".split("@")[0]}* 
- *Powered By @${owner[0].split("@")[0]}*`
+ *Powered By @${owner[0].split("@")[0]}*
+ *Tanggal ${date}*`
     if (teks == '404') {
     	
       let judul = `${ucapan()}, ${name}`.trim()
@@ -273,11 +282,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [{
                 "title": `ᴘᴇᴍɪʟɪᴋ ʙᴏᴛ`,
-                "description": "[ 👣 ] Nomor Pemilik Bot",
+                "description": "[ 🔩 ] Nomor Pemilik Bot",
                 "rowId": `${_p}creator`
               }, {
                 "title": "sʏᴀʀᴀᴛ ᴋᴇᴛᴇɴᴛᴜᴀɴ ᴅᴀɴ ᴘᴇʀᴀᴛᴜʀᴀɴ",
-                "description": "[ ✍️ ] Harap membaca Peraturan demi kenyamanan kita bersama",
+                "description": "[ 🎼 ] Harap membaca Peraturan demi kenyamanan kita bersama",
                 "rowId": `${_p}rules`
               }, {
                 "title": "ꜱᴘᴇᴇᴅ ʙᴏᴛ",
@@ -285,7 +294,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                 "rowId": `${_p}ping`
               }, {
                 "title": "ᴅᴏɴᴀsɪ",
-                "description": "[ 🏝️ ] Dukung terus dengan cara berdonasi seikhlasnya, untuk mendukung agar bot berjalan 24 jam nonstop tanpa ada kendala",
+                "description": "[ ✈️ ] Dukung terus dengan cara berdonasi seikhlasnya, untuk mendukung agar bot berjalan 24 jam nonstop tanpa ada kendala",
                 "rowId": `${_p}donasi`
               }, {
                 "title": "ᴄʀᴇᴅɪᴛ",
@@ -296,168 +305,182 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                 "description": "[ 📚 ] Gabung untuk mendapatkan informasi mengenai bot atau sekedar meramaikan",
                 "rowId": `${_p}gcbot`
               }],
-              "title": `тαмριℓαɴ ѕємυα ρєʀιɴтαн мυʀѕι∂ вσт-χмℓ `
+              "title": `⬡─────────────────❲  Tentang Bot  ❳─────────────────⬡`
             }, {
               "rows": [{
                 "title": `ѕємυα ρєʀιɴтαн`,
                 "description": "[ 🎭 ] Menu Semua Perintah",
                 "rowId": `${_p}? all`
                 }],
-              "title": "─────「 1 」"
+              "title": "⬡────────────────❲  Semua Perintah  ❳────────────────⬡"
             }, {
               "rows": [{
                 "title": `ᴍᴇɴυ gαмє`,
                 "description": "[ 💬 ] Menu Untuk Game",
                 "rowId": `${_p}? game`
               }],
-              "title": "─────「 2 」"
+              "title": "─────「 1 」"
             }, {
               "rows": [{
                 "title": `ᴍᴇɴυ єχρ`,
                 "description": "[ 🚀 ] Menu Untuk EXP",
                 "rowId": `${_p}? xp`
               }],
-              "title": "─────「 3 」"
+              "title": "─────「 2 」"
             }, {
               "rows": [{
                 "title": `ѕтɪᴄᴋᴇʀ`,
                 "description": "[ 🐾 ] Menu Untuk Sticker",
                 "rowId": `${_p}? stiker`
               }],
-              "title": "─────「 4 」"
+              "title": "─────「 3 」"
             }, {
               "rows": [{
                 "title": `кєʀαɴg αᴊαιв`,
                 "description": "[ 📝 ] Kerang Ajaib",
                 "rowId": `${_p}? kerangajaib`
               }],
-              "title": "─────「 5 」"
+              "title": "─────「 4 」"
             }, {
               "rows": [{
                 "title": `qυσтєѕ`,
                 "description": "[ ⚔️ ] Menu Untuk Quotes",
                 "rowId": `${_p}? quotes`
               }],
-              "title": "─────「 6 」"
+              "title": "─────「 5 」"
             }, {
               "rows": [{
                 "title": `α∂мιɴ`,
                 "description": "[ ⚙️ ] Menu Untuk Admin",
                 "rowId": `${_p}? admin`
               }],
-              "title": "─────「 7 」"
+              "title": "─────「 6 」"
             }, {
               "rows": [{
                 "title": `gʀυρ`,
                 "description": "[ ⛽ ] Menu Untuk Group",
                 "rowId": `${_p}? group`
               }],
-              "title": "─────「 8 」"
+              "title": "─────「 7 」"
             }, {
               "rows": [{
                 "title": `ρʀємιυм`,
                 "description": "[ 🖥️ ] Menu Untuk Premium Users",
                 "rowId": `${_p}? premium`
               }],
-              "title": "─────「 9 」"
+              "title": "─────「 8 」"
             }, {
               "rows": [{
                 "title": `ɪɴтєяɴєт`,
                 "description": "[ 📞 ] Menu untuk Internet",
                 "rowId": `${_p}? internet`
               }],
-              "title": "─────「 10 」"
+              "title": "─────「 9 」"
             }, {
               "rows": [{
                 "title": `αɴσɴумσυѕ ᴄнαт`,
                 "description": "[ 🎯 ] Menu Untuk Anonymous Chat",
                 "rowId": `${_p}? anonymous`
               }],
-              "title": "─────「 11 」"
+              "title": "─────「 10 」"
             }, {
               "rows": [{
                 "title": `мєɴυ ɴυℓιѕ & ℓσgσ`,
                 "description": "[ 📑 ] Menu Nulis & Logo",
                 "rowId": `${_p}? nulis`
               }],
-              "title": "─────「 12 」"
+              "title": "─────「 11 」"
             }, {
               "rows": [{
                 "title": `мєɴυ ∂σᴡɴℓσα∂єя`,
                 "description": "[ ✈️ ] Menu Downloader",
                 "rowId": `${_p}? downloader`
               }],
-              "title": "─────「 13 」"
+              "title": "─────「 12 」"
             }, {
               "rows":[{
                 "title": `тσσℓѕ`,
                 "description": "[ 🎸 ] Menu untuk Tools",
                 "rowId": `${_p}? tools`
               }],
-              "title": "─────「 14 」"
+              "title": "─────「 13 」"
             }, {
               "rows": [{
                 "title": `мєɴυ ƒυɴ`,
                 "description": "[ 📪 ] Menu Fun",
                 "rowId": `${_p}? fun`
               }],
-              "title": "─────「 15 」"
+              "title": "─────「 14 」"
             }, {
               "rows": [{
                 "title": `∂αтαвαѕє вσт`,
                 "description": "[ 📊 ] Menu untuk Database",
                 "rowId": `${_p}? database`
               }],
-              "title": "─────「 16 」"
+              "title": "─────「 15 」"
             }, {
               "rows": [{
                 "title": `νσтє & αвѕєɴ`,
                 "description": "[ 🎖️ ] Menu untuk Vote & Absen",
                 "rowId": `${_p}? vote`
               }],
-              "title": "─────「 17 」"
+              "title": "─────「 16 」"
             }, {
               "rows": [{
                 "title": `мєɴυ ιѕℓαм`,
                 "description": "[ 🕋 ] Menu Islamic",
                 "rowId": `${_p}? islamic`
               }],
-              "title": "─────「 18 」"
+              "title": "─────「 17 」"
             }, {
               "rows": [{
                 "title": `ρєɴgυвαн ѕυαʀα`,
                 "description": "[ 🎙️ ] Menu Pengubah Suara",
                 "rowId": `${_p}? audio`
               }],
-              "title": "─────「 19 」"
+              "title": "─────「 18 」"
             }, {
               "rows": [{
                 "title":  `ᴊα∂ι вσт`,
                 "description": "[ 🖨️ ] Menu jadibot/belum tersedia",
                 "rowId": `${_p}? jadibot`
               }],
-              "title": "─────「 20 」"
+              "title": "─────「 19 」"
             }, {
               "rows": [{
                 "title": `ɪɴƒσ`,
                 "description": "[ 🔩 ] Menu untuk Info",
                 "rowId": `${_p}? info`
               }],
-              "title": "─────「 21 」"
+              "title": "─────「 20 」"
             }, {
               "rows": [{
                 "title": `тαɴρα кαтєgσʀɪ`,
                 "description": "[ 🔌 ] Menu Tanpa Kategori",
                 "rowId": `${_p}? tanpakategori`
               }],
-              "title": "─────「 22 」"
+              "title": "─────「 21 」"
             }, {
               "rows": [{
                 "title":  `σᴡɴєʀ`,
                 "description": "[ 🔊 ] Menu Khusus Owner",
                 "rowId": `${_p}? owner`
               }],
-              "title": "─────「 23 」"
+              "title": "─────「 22 」"
+            }, {
+              "rows": [{
+                "title":  `тєкѕ ρʀσ`,
+                "description": "[ 🎬 ] Menu Khusus Text/Pro",
+                "rowId": `${_p}? textpro`
+              }],
+              "title": "─────「 23 」" 
+            }, {
+              "rows": [{
+                "title":  `ѕнσят ℓιɴк`,
+                "description": "[ 🎬 ] Menu Khusus Bit,Ly/Gabut Bang",
+                "rowId": `${_p}? bitly`
+              }], 
+              "title": "─────「 24 」"    
             }
           ]
     const listMessage = {
@@ -530,9 +553,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 'showAdAttribution': true,
 'renderLargerThumbnail': true,
 'title': 'мυʀѕι∂ вσт-χмℓ',
-'body':'ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ʙʏ ᴍᴜʀꜱɪᴅ',
+'body':'ʙᴏᴛ ᴡʜᴀᴛꜱᴀᴘᴘ',
 'mediaType': 1,
-'thumbnail': await(await fetch('https://telegra.ph/file/83c5242f5535f03c7c7c3.jpg')).buffer(),
+'thumbnail': await(await fetch('https://telegra.ph/file/f06dc70ae21fac8257dc1.jpg')).buffer(),
 'sourceUrl':'https://instagram.com/mursid.st'}},
 'caption': text,
 'footer': hao,
@@ -546,7 +569,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 'headerType':6}
     await conn.sendMessage(m.chat,buttonMessage, { quoted:m})
 //await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/263582cc62fcfbdacd094.jpg')).buffer(),  '*────────[ DASBOARD ]───────*', text, 'ᴅσɴαѕι', '.donasi', 'ρємιℓιк вσт', '.owner', m)
-await conn.sendFile(m.chat, fs.readFileSync('./mp3/sidd.mp3'), '', m, true,{ fileLength: 887890909999999 )
+await conn.sendFile(m.chat, fs.readFileSync('./mp3/sidd.mp3'), '', false, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
@@ -580,18 +603,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Good morning"
+  res = "Selamat pagi"
   if (time >= 4) {
-    res = "Good morning"
+    res = "Selamat pagi"
   }
   if (time > 10) {
-    res = "Good afternoon"
+    res = "Selamat siang"
   }
   if (time >= 15) {
-    res = "Good afternoon"
+    res = "Selamat sore"
   }
   if (time >= 18) {
-    res = "Good night"
+    res = "Selamat malam"
   }
   return res
 }
