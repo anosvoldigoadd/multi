@@ -1,12 +1,23 @@
-const { facebookdl, facebookdlv2 } = require('@bochilteam/scraper')
+let fg = require('api-dylux') 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `Use example / Gunakan ${usedPrefix}${command} https://www.facebook.com/juankcortavarriaoficial/videos/218237676749570/`
-    const { result } = await facebookdl(args[0]).catch(async _ => await facebookdlv2(args[0]))
-    for (const { url, isVideo } of result.reverse()) conn.sendFile(m.chat, url, `facebook.${!isVideo ? 'bin' : 'mp4'}`, `© мυʀѕι∂ вσт-χмℓ`, m)
+ 
+ if (!args[0]) throw `✈️ Masukan Tautan Download Facebook\n\n*Contoh Download* :\n*${usedPrefix + command}* https://fb.watch/d7nB8-L-gR/`
+    
+   try {
+   let res = await fg.fbdl(args[0])
+    for (let result of res.download) {
+    	  let tex = `
+Kualitas Video : ${result.quality}
+Powerad By : Mursid S`
+    conn.sendFile(m.chat, result.url, 'fb.mp4', tex, m)
+     } 
+   
+ } catch {
+ 	m.reply('Error: Intenta con otro link')
+ 	} 
 }
 handler.help = ['facebook'].map(v => v + ' <url>')
-handler.tags = ['downloader']
-
+handler.tags = ['dl']
 handler.command = /^((facebook|fb)(downloder|dl)?)$/i
 
 module.exports = handler
