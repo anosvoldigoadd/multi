@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
     let uptime = clockString(_uptime)
 
     let tio = `
-Mode : ${global.opts['self'] ? 'Self' : 'publik'}\nAktif selama : ${uptime}\n${Object.keys(global.db.data.users).length} Pengguna\n${Object.entries(global.db.data.users).filter(user => user[1].banned).length} Pengguna Terbanned\nFitur Sering Digunakan : ${Object.entries(db.data.stats).length}\n\njika Mode Self
+Mode : ${global.opts['self'] ? 'Self' : 'publik'}\nAktif selama : ${uptime}\n${Object.keys(global.db.data.users).length} Pengguna\n${Object.entries(global.db.data.users).filter(user => user[1].banned).length} Pengguna Terbanned\nFitur Sering Digunakan : ${Object.entries(db.data.stats).length}
     `.trim()
 conn.send2But(m.chat, tio, wm, 'Speed', '.speed', 'Back', '.menu',m)
 conn.reply(tio)
