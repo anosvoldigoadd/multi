@@ -3,26 +3,26 @@
 //RECODE BY MURSID
 
 //『 Utama 』 //
-global.owner = ['6288233832771']  // isi jika perlu
-global.mods = ['6288233832771']   // isi jika perlu
-global.prems = ['6288233832771']  // isi jika perlu
+global.owner = ['6288232154376']  // isi jika perlu
+global.mods = ['6288232154376']   // isi jika perlu
+global.prems = ['6288232154376']  // isi jika perlu
 
 //Isi dengan nama dan nomor lu//
-global.nameowner = '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎' // isi nama kalian bebas
-global.numberowner = '6288233832771' // isi nomor kalian dengan awalan seperti di contoh 
+global.nameowner = 'AbiDev' // isi nama kalian bebas
+global.numberowner = '6288232154376' // isi nomor kalian dengan awalan seperti di contoh 
 
 //Name Bot & Grouplink//
-global.namebot = 'мυʀѕι∂ вσт-χмℓ'
-global.gc = 'https://chat.whatsapp.com/D8yjEn4OAcJ4Pe41pjPDFB'
-global.web = 'https://instagram.com/mursid.st' //ubah jadi website lu, bisa link ig, link github, link yt, klo link gc ntr beda tampilan lagi. 
+global.namebot = 'Ｃｈｉｔａｎｄａ - ＭＤ'
+global.gc = 'https://chat.whatsapp.com/BKi5RCs2EHaG2g0e2bJ72r'
+global.web = 'https://instagram.com/abityru24' //ubah jadi website lu, bisa link ig, link github, link yt, klo link gc ntr beda tampilan lagi. 
 
 //Tanpilan wm Bot //
 global.lolkey = 'rey2k22' //biar mudah ngegantinya semisal apikeynya expired:v
 global.zenzkey = 'BagasPrdn' //ganti jadi apikey lu kalau expired
-global.wm = 'мυʀѕι∂ вσт-χмℓ'
+global.wm = 'Ｃｈｉｔａｎｄａ - ＭＤ'
 global.watermark = wm
-global.wm2 = 'мυʀѕι∂ вσт-χмℓ'
-global.wm3 = 'мυʀѕι∂ вσт-χмℓ'
+global.wm2 = 'Ｃｈｉｔａｎｄａ - ＭＤ'
+global.wm3 = 'Ｃｈｉｔａｎｄａ - ＭＤ'
 global.wm4 = '2022'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='
 global.wait = 'ꜱᴇᴅᴀɴɢ ᴅɪᴘʀᴏꜱᴇꜱ...'
@@ -31,7 +31,7 @@ global.benar = 'вєɴαʀ'
 global.salah = 'ѕαℓαн'
 global.stiker_wait = 'Loading...'
 global.packname = 'sᴛɪᴄᴋᴇʀ ʙʏ'
-global.author = 'мυʀѕι∂ вσт-χмℓ'
+global.author = 'Ｃｈｉｔａｎｄａ - ＭＤ'
 
 //Apikey Setting//
 global.APIs = { // API Prefix
